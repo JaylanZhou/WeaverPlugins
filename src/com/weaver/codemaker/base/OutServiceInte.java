@@ -15,7 +15,7 @@ public class OutServiceInte extends OutBase {
 
         this.createBufferWrite(this.createFile(tableTools,"service/inte",outUrl));
 
-        this.write("package " + this.PROJECTNAME + "." + packageName + ".service.inte;");
+        this.write("package " + this.PROJECTNAME + packageName + ".service.inte;");
 
         this.write("public interface " + modelName + "ServiceInte {");
 

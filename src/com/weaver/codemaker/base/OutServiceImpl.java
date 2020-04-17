@@ -15,11 +15,11 @@ public class OutServiceImpl extends OutBase {
 
         this.createBufferWrite(this.createFile(tableTools,"service/impl",outUrl));
 
-        this.write("package " + this.PROJECTNAME + "." + packageName + ".service.impl;");
+        this.write("package " + this.PROJECTNAME + packageName + ".service.impl;");
 
-        this.write("import " + this.PROJECTNAME + "." + packageName + ".dao." + modelName + "Dao;");
+        this.write("import " + this.PROJECTNAME + packageName + ".dao." + modelName + "Dao;");
 
-        this.write("import " + this.PROJECTNAME + "." + packageName + ".service.inte." + modelName + "ServiceInte;");
+        this.write("import " + this.PROJECTNAME + packageName + ".service.inte." + modelName + "ServiceInte;");
 
         this.write("import com.weaverboot.frame.dao.BaseCustomDao;");
 

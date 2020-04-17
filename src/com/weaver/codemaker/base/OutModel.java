@@ -18,7 +18,7 @@ public class OutModel extends OutBase{
 
         this.createBufferWrite(this.createFile(tableTools,"model",outUrl));
 
-        this.write("package " + this.PROJECTNAME + "." + packageName +  ".model;");
+        this.write("package " + this.PROJECTNAME + packageName +  ".model;");
 
         this.write("import com.weaverboot.frame.model.BaseModel;");
 

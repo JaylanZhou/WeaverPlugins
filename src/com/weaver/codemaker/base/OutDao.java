@@ -15,9 +15,9 @@ public class OutDao extends OutBase {
 
         this.createBufferWrite(this.createFile(tableTools,"dao",outUrl));
 
-        this.write("package " + this.PROJECTNAME + "." + packageName + ".dao;");
+        this.write("package " + this.PROJECTNAME + packageName + ".dao;");
 
-        this.write("import " + this.PROJECTNAME + "." + packageName + ".model." + modelName + ";");
+        this.write("import " + this.PROJECTNAME + packageName + ".model." + modelName + ";");
 
         this.write("import com.weaverboot.frame.dao.BaseDao;");
 

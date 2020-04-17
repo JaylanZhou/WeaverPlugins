@@ -3,6 +3,8 @@ package com.weaver.codemaker.plugin.outCustom.action;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.vfs.VirtualFile;
+import com.weaver.codemaker.tools.baseTools.BaseTools;
+import com.weaver.pluginsTools.CheckSourceDirectoryTools;
 import com.weaver.pluginsTools.IdeaPluginTools;
 import com.weaver.pluginsTools.JFrameInitTools;
 import org.jetbrains.annotations.NotNull;
@@ -24,7 +26,7 @@ public class OutCustomAction extends AnAction {
 
         String virtualFilePath = virtualFile.getPath();
 
-        if(virtualFilePath.contains("/src/")){
+        if(BaseTools.notNullString(CheckSourceDirectoryTools.checkIsSourceDirectory(e,virtualFilePath))){
 
             e.getPresentation().setEnabledAndVisible(true);
 

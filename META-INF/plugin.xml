@@ -1,33 +1,52 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
+  <id>com.weaver</id>
+  <name>Weaver Plugins</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+  <vendor email="jinliang.zhou@weaver.com.cn" url="https://www.weaver.com.cn">Weaver</vendor>
 
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
-    ]]></description>
+  <!--  <description><![CDATA[-->
+  <!--      Enter short description for your plugin here.<br>-->
+  <!--      <em>most HTML tags may be used</em>-->
+  <!--    ]]></description>-->
 
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
-  </change-notes>
+  <!--  <change-notes></change-notes>-->
 
-  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
 
-  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+  <!-- please see http://www.jetbraie5ns.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
-  <depends>com.intellij.modules.platform</depends>
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
   </extensions>
 
   <actions>
-    <!-- Add your actions here -->
+    <group id="Weaver" text="Weaver" description="泛微插件"
+           icon="/icons/weaver_wev8.png" popup="true">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+    </group>
+    <group id ="CodeMaker" text="CodeMaker" popup="true">
+      <action id="dataBaseInfo" class="com.weaver.codemaker.plugin.outInfomation.action.OutInfomationAction" text="DataBase Information" description="数据库信息">
+      </action>
+      <add-to-group group-id="Weaver" anchor="last"/>
+    </group>
+    <group id="WeaverRightMenu" text="Weaver" description="泛微插件 - 右键菜单"
+           icon="/icons/weaver_wev8.png" popup="true">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+<!--      <action id="GenerateModuleAction" class="com.weaver.ecodeTools.plugin.generateModule.action.GenerateModuleAction" text="GenerateModule" description="项目路径生成">-->
+<!--        <add-to-group group-id="WeaverRightMenu"/>-->
+<!--      </action>-->
+<!--      <action id="CopyModuleAction" class="com.weaver.ecodeTools.plugin.copyModule.action.CopyModuleAction" text="CopyModule" description="项目复制">-->
+<!--        <add-to-group group-id="WeaverRightMenu"/>-->
+<!--      </action>-->
+      <action id="codeMake" class="com.weaver.codemaker.plugin.outCustom.action.OutCustomAction" text="CodeMake" description="代码生成">
+        <add-to-group group-id="WeaverRightMenu"/>
+      </action>
+    </group>
   </actions>
 
 </idea-plugin>
