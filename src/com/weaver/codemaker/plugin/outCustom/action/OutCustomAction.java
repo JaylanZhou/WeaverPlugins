@@ -24,7 +24,7 @@ public class OutCustomAction extends AnAction {
 
         String virtualFilePath = virtualFile.getPath();
 
-        if(virtualFilePath.contains("/src/main/java/")){
+        if(virtualFilePath.contains("/src/")){
 
             e.getPresentation().setEnabledAndVisible(true);
 

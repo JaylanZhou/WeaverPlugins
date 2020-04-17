@@ -22,6 +22,10 @@ public class OutModel extends OutBase{
 
         this.write("import com.weaverboot.frame.model.BaseModel;");
 
+        this.write("import com.weaverboot.frame.dao.anno.TableInfo;");
+
+        this.write("@TableInfo(value = \"" + tableTools.getTableName() + "\")");
+
         this.write("public class " + modelName + " extends BaseModel {");
 
         for (ColumnTools c:tableTools.getColumnToolsList()
@@ -44,13 +48,13 @@ public class OutModel extends OutBase{
 
         }
 
-        this.write("    @Override");
-
-        this.write("    public String getTableName() {");
-
-        this.write("        return \"" + tableTools.getTableName() + "\";");
-
-        this.write("    }");
+//        this.write("    @Override");
+//
+//        this.write("    public String getTableName() {");
+//
+//        this.write("        return \"" + tableTools.getTableName() + "\";");
+//
+//        this.write("    }");
 
         this.write("}");
 

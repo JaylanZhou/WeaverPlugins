@@ -1,7 +1,7 @@
 package com.weaver.ecodeTools.plugin.generateModule.tools;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.actionSystem.DataKeys;
+import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.openapi.module.Module;
 import com.weaver.pluginsTools.IdeaPluginTools;
 
@@ -17,7 +17,7 @@ public class GenerateModuleTools {
 
     public static void generateModuleDirectory(AnActionEvent anActionEvent,String moduleName){
 
-        Module module = anActionEvent.getData(DataKeys.MODULE);
+        Module module = anActionEvent.getData(LangDataKeys.MODULE);
 
         String modulePath = formatModulePath(module);
 

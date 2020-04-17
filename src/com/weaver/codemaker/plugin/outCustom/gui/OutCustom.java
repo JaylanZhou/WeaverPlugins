@@ -52,7 +52,7 @@ public class OutCustom {
 
                     Messages.showMessageDialog("代码已生成", "成功", Messages.getInformationIcon());
 
-                    anActionEvent.getProject().getBaseDir().refresh(false,true);
+                    anActionEvent.getProject().getProjectFile().refresh(false,true);
 
                 } catch (Exception ex){
 

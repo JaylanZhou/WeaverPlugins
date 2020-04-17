@@ -1,7 +1,8 @@
 package com.weaver.pluginsTools;
 
+import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.DataContext;
-import com.intellij.openapi.actionSystem.DataKeys;
+import com.intellij.openapi.actionSystem.DataKey;
 import com.intellij.openapi.vfs.VirtualFile;
 
 import java.util.concurrent.ExecutorService;
@@ -13,7 +14,7 @@ public class IdeaPluginTools {
 
     public static VirtualFile getFileExtension(DataContext dataContext) {
 
-        VirtualFile file = DataKeys.VIRTUAL_FILE.getData(dataContext);
+        VirtualFile file = CommonDataKeys.VIRTUAL_FILE.getData(dataContext);
 
         return file;
 
